@@ -19,4 +19,19 @@
         Dim agrega As New Agrega
         agrega.Show()
     End Sub
+
+    Private Sub btnBusca_Click(sender As Object, e As EventArgs) Handles btnBusca.Click
+        Dim buscar As New Buscar
+        buscar.Show()
+    End Sub
+
+    Private Sub btnModifica_Click(sender As Object, e As EventArgs) Handles btnModifica.Click
+        Dim modificar As New Modificar
+        modificar.Show()
+    End Sub
+
+    Private Sub btnEntrega_Click(sender As Object, e As EventArgs) Handles btnEntrega.Click
+        Dim entregar As New Imprimir
+        entregar.Show()
+    End Sub
 End Class

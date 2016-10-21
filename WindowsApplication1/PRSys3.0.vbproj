@@ -65,9 +65,11 @@
     <ApplicationIcon>prLogo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -101,6 +103,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>alDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bdpr.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdpr.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar.Designer.vb">
+      <DependentUpon>Buscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imprimir.Designer.vb">
+      <DependentUpon>Imprimir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Imprimir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar.Designer.vb">
+      <DependentUpon>Modificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -122,13 +147,19 @@
     <Compile Include="principal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WindowsApplication1.vb" />
-    <Compile Include="WindowsApplication11.vb" />
-    <Compile Include="WindowsApplication12.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Agrega.resx">
       <DependentUpon>Agrega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscar.resx">
+      <DependentUpon>Buscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imprimir.resx">
+      <DependentUpon>Imprimir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar.resx">
+      <DependentUpon>Modificar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -151,6 +182,17 @@
     </None>
     <None Include="alDataSet.xss">
       <DependentUpon>alDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdpr.xsc">
+      <DependentUpon>bdpr.xsd</DependentUpon>
+    </None>
+    <None Include="bdpr.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdpr.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdpr.xss">
+      <DependentUpon>bdpr.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -176,6 +218,7 @@
     <Content Include="al.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="My Project\img\a.png" />
     <Content Include="prLogo.ico" />
   </ItemGroup>
   <ItemGroup>
