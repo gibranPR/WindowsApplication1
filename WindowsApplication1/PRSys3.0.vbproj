@@ -114,6 +114,8 @@
     <Compile Include="Buscar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Equipo.vb" />
+    <Compile Include="NotaEquipo.vb" />
     <Compile Include="Imprimir.Designer.vb">
       <DependentUpon>Imprimir.vb</DependentUpon>
     </Compile>

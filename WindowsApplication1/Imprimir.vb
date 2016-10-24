@@ -20,7 +20,7 @@
         setRegistro(aux.Rows(0).Item(0))
         cerrarConexion()
         txtId.Text = getRegistro()
-        'PrintForm1.Print()
+        '
     End Sub
     Private Sub abrirConexion()
         conexion.Open()
@@ -30,6 +30,17 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MessageBox.Show("SImn")
+
+    End Sub
+    Private Sub imprime()
+        'Orientación horizontal
+        PrintForm1.PrinterSettings.DefaultPageSettings.Landscape = True
+        'margenes
+        PrintForm1.PrinterSettings.DefaultPageSettings.Margins.Bottom = 20
+        PrintForm1.PrinterSettings.DefaultPageSettings.Margins.Left = 20
+        PrintForm1.PrinterSettings.DefaultPageSettings.Margins.Right = 20
+        PrintForm1.PrinterSettings.DefaultPageSettings.Margins.Top = 20
+        'Imprimir
+        PrintForm1.Print()
     End Sub
 End Class
